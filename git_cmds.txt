@@ -28,7 +28,10 @@ i potem commit
 7. utworzenie galezi:
 git branch <new_branchname> <branch_from>
 
-8. zapisanie zmian w galezi
+8. zapisanie zmian w galezi master
 git commit -a
+
+9. zmiana na glaz <new_branchname>
+git checkout <new_branchname>
 
 
