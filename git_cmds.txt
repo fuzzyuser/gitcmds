@@ -25,4 +25,10 @@ git add <file>
 
 i potem commit
 
+7. utworzenie galezi:
+git branch <new_branchname> <branch_from>
+
+8. zapisanie zmian w galezi
+git commit -a
+
 
