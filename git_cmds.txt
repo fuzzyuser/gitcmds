@@ -23,3 +23,6 @@ git status
 6. aktualizacja pliku po zmianie:
 git add <file>
 
+i potem commit
+
+
