@@ -6,3 +6,20 @@ git init
 
 2. Dodanie <pliku> w <folderze> do indeksu GIT:
 git add <file>
+
+chyba git add ~A ? dodaje wszystkie ?
+
+3. Commit pliku:
+git commit -m "<tekst>"
+
+Bez -m otwiera sie vi zeby wpisac tekst
+
+4. log operacji GIT:
+git log
+
+5. status GIT:
+git status
+
+6. aktualizacja pliku po zmianie:
+git add <file>
+
