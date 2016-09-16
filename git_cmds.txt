@@ -34,4 +34,6 @@ git commit -a
 9. zmiana na glaz <new_branchname>
 git checkout <new_branchname>
 
+10. tagowanie releaseow
+git tag <number> <release_branch>
 
