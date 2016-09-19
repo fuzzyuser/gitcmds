@@ -7,15 +7,27 @@ git init
 2. Dodanie <pliku> w <folderze> do indeksu GIT:
 git add <file>
 
-chyba git add ~A ? dodaje wszystkie ?
+chyba git add -a dodaje wszystkie, ale uwaga: wszystkie
+te ktore w nim byly, czyli to jest de facto update.
+Niedodane pliki trzeba wpierw dodac korzystajac z 
+git add -i albo jest explicite dodac.
+ 
 
 3. Commit pliku:
 git commit -m "<tekst>"
 
 Bez -m otwiera sie vi zeby wpisac tekst
 
+git commit -m "tekst" -a aktualizuje pliki w repozytorium i comituje
+git commit -m "tekst" pliki aktualizuje podane pliki i comituje
+
+
 4. log operacji GIT:
 git log
+
+lub 
+     git log --pretty=oneline 
+pokazuje tylko komentarze
 
 5. status GIT:
 git status
@@ -36,4 +48,67 @@ git checkout <new_branchname>
 
 10. tagowanie releaseow
 git tag <number> <release_branch>
+
+git tag pokazuje liste tagow
+
+11. rebase kopiuje zmiany z podanej galezi na aktualna galez
+git rebase <branch>
+
+git checkout master
+git rebase release_branch_1.0
+
+przenosi zmiany z release_branch_1.0 na master
+
+12. delete branch
+git branch -d <branch>
+
+Jeli galaz zostala otagowana to po skasowaniu 
+galezi pozostaje tag, i mozna wrocic do stanu 
+wskazywanego przez ten tag nawet jesli galaz 
+jest skasowana.
+
+13. Utworzenie galezi z taga:
+git branch <new_branch> <tag>
+
+np. git branch RB_1.0.1 1.0 tworzy galaz RB_1.0.1 z taga 1.0
+
+14. Utworzenie archiwum
+git archive --format=zip --prefix=<nazwa/> <tag> >plik
+
+np.
+git archive --format=zip --prefix=my_release_1.0 1.0 >myrelease_1.0.zip
+
+Mozna tez zrobic tar i gzip:
+git archive --format=tar --prefix=my_release_1.0 1.0 |gzip myrelease_1.0.tar.gz
+
+15. sklonowanie repozytorium
+git clone git://github.com/<myname>/<mysite> <local_folder>
+
+np. git clone git://github.com/fuzzyuser/gitdemo.git kopia_gitdemo
+
+16. adding files and staging
+
+Interaktywne dodawania plikow:
+git add -i
+
+Jedna z funkcjonalnosci modu interaktywnego jest patch:
+5 -- wlacza tryb path update
+1 -- pokazuje status
+enter - wychodzi z patch pokazujac roznice w plikach i umozliwia
+akceptacje (y) lub odrzucenie (n).
+
+Uruchamianie od razu trybu patch bez trybu interactive:
+git add -p
+
+17. Pokazywanie roznic
+git diff
+
+Pokazuje roznice pomiedzy tym co jest staged (czyli zostalo
+dodane przez add) a biezacym stanem w aktualnym folderze
+
+git diff -cached
+pokazuje roznice pomiedzy tym co jest w staging area a biezacym stanem.
+
+git diff HEAD
+pokazuje roznice od czasu ostatniego commitu w aktywnej galezi
 
