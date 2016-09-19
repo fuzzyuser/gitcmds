@@ -112,3 +112,10 @@ pokazuje roznice pomiedzy tym co jest w staging area a biezacym stanem.
 git diff HEAD
 pokazuje roznice od czasu ostatniego commitu w aktywnej galezi
 
+18. rename file
+git mv <original-filename> <new-filename>
+
+19. remove file
+git rm <file>
+remove file from repo
+
