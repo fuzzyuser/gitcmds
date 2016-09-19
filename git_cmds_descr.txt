@@ -125,4 +125,3 @@ git branch -m <old_name> <new_name>
 21. wyswietlenie listy galezi
 git branch
 
-22. 
