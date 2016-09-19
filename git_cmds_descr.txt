@@ -119,3 +119,10 @@ git mv <original-filename> <new-filename>
 git rm <file>
 remove file from repo
 
+20. zmiana nazwy galezi
+git branch -m <old_name> <new_name>
+
+21. wyswietlenie listy galezi
+git branch
+
+22. 
