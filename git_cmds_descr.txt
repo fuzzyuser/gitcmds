@@ -141,3 +141,19 @@ merges from a given <from_branch> to current branch
 25. squashing commit
 git merge --squash <from_branch>
 
+26. renaming a branch
+git branch -m <old_name> <new-name>
+
+27. znajdowanie kto zmienial
+git blame <plik>
+pokazuje kto zmienial plik
+
+git blame -L <from>,<to lub +/- ile> <plik>
+pokazuje kto zmienial linie od <from> do <to> lub 
+od <from> plus <ile> lub 
+od <from> minus <ile>
+
+28. amending commit
+git commit -m "blablabla" -a
+...do some minor changes...
+git commit -C HEAD -a -amend
