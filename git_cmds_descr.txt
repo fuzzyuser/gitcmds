@@ -122,8 +122,9 @@ remove file from repo
 20. zmiana nazwy galezi
 git branch -m <old_name> <new_name>
 
-21. wyswietlenie listy galezi
+21. wyswietlenie listy GAlezi
 git branch
+
 
 22. create a new branch and checkout to it
 git checkout -b <new_branch> <from_branch>
@@ -137,4 +138,8 @@ git checkout -b <new_branch> <from_branch>
 git merge <from_branch>
 
 merges from a given <from_branch> to current branch
+
+25. squashing commit
+git merge --squash <from_branch>
+
 
