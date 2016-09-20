@@ -157,3 +157,7 @@ od <from> minus <ile>
 git commit -m "blablabla" -a
 ...do some minor changes...
 git commit -C HEAD -a -amend
+
+29. push to remote
+git remote add origin https://github.com/fuzzyuser/gitcmds.git
+git push -u origin master
