@@ -125,3 +125,16 @@ git branch -m <old_name> <new_name>
 21. wyswietlenie listy galezi
 git branch
 
+22. create a new branch and checkout to it
+git checkout -b <new_branch> <from_branch>
+
+23. branch merging types:
+- straight merges  -- merge two or more branches to one
+- squashed commits -- changes from one branch applied to commit on another 
+- cherry-picking   -- pick changes from one branch and apply to another
+
+24. straight merges
+git merge <from_branch>
+
+merges from a given <from_branch> to current branch
+
